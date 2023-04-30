@@ -1,11 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
 import { motion ,AnimatePresence } from 'framer-motion';
-const Order = ({ pizza }) => {
+import { useEffect } from 'react';
+const Order = ({ pizza,setShowModal }) => {
   // const [showTitle,removeTitle]=useState(true)
   // setTimeout(()=>{
   //   removeTitle(false)
   // },4000)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setShowModal(true)
+  },5000)},[setShowModal])
   const containervariant={
     initial:{x:1000},
     animate:{

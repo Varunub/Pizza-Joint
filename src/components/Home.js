@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion'
+import Loader from './Loader';
 const Home = () => {
   return (
     <motion.div className="home container"
@@ -31,7 +32,7 @@ const Home = () => {
           Create Your Pizza
         </motion.button>
       </Link>
-      
+      <Loader></Loader>
     </motion.div>
   )
 }
